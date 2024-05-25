@@ -20,6 +20,7 @@ def load_data(nrows):
     return data
 
 test_var = st.text(data.variable)
+st.text(212)
 #st.write(data.variable)
 
 data_load_state = st.text('Loading data...')
