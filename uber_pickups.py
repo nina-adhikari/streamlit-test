@@ -23,6 +23,16 @@ test_var = st.text(data.variable)
 st.text(212)
 #st.write(data.variable)
 
+
+with st.container():
+    query = st.text_area("Ask a question here:", height= 100, key= "query_text")
+    button = st.button("Submit", key="button")
+    if button or query:
+        with st.spinner('Fetching Answer...'): 
+            st.text(query)
+
+#st.text(input)
+
 data_load_state = st.text('Loading data...')
 dataset = load_data(10000)
 data_load_state.text("Done! (using st.cache_data)")
@@ -41,3 +51,4 @@ filtered_data = dataset[dataset[DATE_COLUMN].dt.hour == hour_to_filter]
 
 st.subheader('Map of all pickups at %s:00' % hour_to_filter)
 st.map(filtered_data)
+
