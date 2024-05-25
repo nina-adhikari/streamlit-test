@@ -4,7 +4,7 @@ import numpy as np
 
 from data import data
 
-print(data.variable)
+#print(data.variable)
 
 st.title('Uber pickups in NYC')
 
