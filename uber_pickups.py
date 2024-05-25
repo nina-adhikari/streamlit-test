@@ -4,7 +4,6 @@ import numpy as np
 
 from data import data
 
-#print(data.variable)
 
 st.title('Uber pickups in NYC')
 
@@ -21,7 +20,7 @@ def load_data(nrows):
     return data
 
 test_var = st.text(data.variable)
-st.write(data.variable)
+#st.write(data.variable)
 
 data_load_state = st.text('Loading data...')
 dataset = load_data(10000)
